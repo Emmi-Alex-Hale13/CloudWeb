@@ -1,13 +1,56 @@
 <html>
     <head>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
-       <div class="container">
-            <div class=jumbotron>Serving up html</div>
-       </div>
+      <h1>
+          Welcome to <%=title%>
+      </h1>
 
-       <script src="js/jquery.min.js"></script>
-       <script src="js/bootstrap.min.js"></script>
+      <h3 class="intro">Register a dog!- <i>Please fill out the following details</i></h3>
+      <form role="form" class="register-form"  method="POST">
+        
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="OwnerName" placeholder="Your Name" required>
+          </div>
+          <br>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="pet" id="PetName" placeholder="Your Pet's Name" required>
+          </div>
+          <br>
+        
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="area" id="DogArea" placeholder="Your Area" required>
+        </div>
+        <br>
+        <div class="text-center"><button type="submit">Register</button></div>
+        <br>
+      </form>
+
+      <h2>Meet our walkers!</h2>
+        <!--/walkers database display-->
+        <%for(let i=0; i<lores.length; i++){%>
+          <div class="row">    
+            <br>
+            <div class="col-md-5 col-sm-3 col-md-offset-2">
+              <h3><%=lores[i].WalkerName%></h3>
+              <div class="row">
+                <div class="col-xs-6">
+                  <h4><span class="label label-default"><%=lores[i].WalkerEmail%></span></h4>
+                </div>
+                <div class="col-xs-6">
+                  <h4><span class="label label-default"><%=lores[i].WalkerArea%></span></h4>
+                </div>
+              </div>
+              <br>
+              
+            </div>
+            <br>
+            
+          </div>
+          <hr>
+          <hr>
+          <%}%>
+
     </body>
 </html>
