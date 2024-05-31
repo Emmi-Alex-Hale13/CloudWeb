@@ -1,0 +1,13 @@
+type dogs{
+  DogID: Integer
+  OwnerName: String
+  PetName: String
+  DogArea: String
+}
+
+type walkers{
+  WalkerID: Integer
+  WalkerName: String
+  WalkerEmail: String
+  WalkerArea: String
+}
