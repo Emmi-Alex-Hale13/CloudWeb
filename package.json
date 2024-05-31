@@ -1,0 +1,35 @@
+{
+    "name": "cloud",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "DEBUG=app nodemon app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "bootstrap": "^5.3.3",
+        "chalk": "^5.3.0",
+        "debug": "^4.3.4",
+        "ejs": "^3.1.10",
+        "express": "^4.19.2",
+        "jquery": "^3.7.1",
+        "morgan": "^1.10.0",
+        "mssql": "^10.0.2",
+        "nodemon": "3.1.0"
+    },
+    "nodemonConfig": {
+        "restartable": "rs",
+        "ignore": [
+            "node_modules/**/node_modules"
+        ],
+        "delay": 2500,
+        "env": {
+            "NODE_ENV": "development",
+            "PORT": 4000
+        }
+    }
+}
