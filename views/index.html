@@ -4,7 +4,7 @@
     </head>
     <body>
       <h1>
-          Welcome to <%=title%>
+          Welcome to Waggly
       </h1>
 
       <h3 class="intro">Register a dog!- <i>Please fill out the following details</i></h3>
@@ -29,17 +29,17 @@
 
       <h2>Meet our walkers!</h2>
         <!--/walkers database display-->
-        <%for(let i=0; i<lores.length; i++){%>
+       
           <div class="row">    
             <br>
             <div class="col-md-5 col-sm-3 col-md-offset-2">
-              <h3><%=lores[i].WalkerName%></h3>
+              <h3><lores[i].WalkerName></h3>
               <div class="row">
                 <div class="col-xs-6">
-                  <h4><span class="label label-default"><%=lores[i].WalkerEmail%></span></h4>
+                  <h4><span class="label label-default"><lores[i].WalkerEmail></span></h4>
                 </div>
                 <div class="col-xs-6">
-                  <h4><span class="label label-default"><%=lores[i].WalkerArea%></span></h4>
+                  <h4><span class="label label-default"><lores[i].WalkerArea></span></h4>
                 </div>
               </div>
               <br>
@@ -50,7 +50,6 @@
           </div>
           <hr>
           <hr>
-          <%}%>
 
     </body>
 </html>
