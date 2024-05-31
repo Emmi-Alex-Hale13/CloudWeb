@@ -24,7 +24,7 @@
         "mssql": "^10.0.2",
         "nodemon": "3.1.0"
     },
-    "assets":["./staticwebapp.config.json"],
+    "assets":["./swa-db-connections/staticwebapp.database.config.json"],
     "nodemonConfig": {
         "restartable": "rs",
         "ignore": [
