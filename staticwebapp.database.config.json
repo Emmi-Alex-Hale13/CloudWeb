@@ -1,0 +1,32 @@
+{
+  "$schema": "https://github.com/Azure/data-api-builder/releases/latest/download/dab.draft.schema.json",
+  "data-source": {
+    "database-type": "mssql",
+    "options": {
+      "set-session-context": false 
+    },
+    "connection-string": "@env('DATABASE_CONNECTION_STRING')"
+  },
+    "host": {
+      "mode": "production",
+      "cors": {
+        "origins": ["https://proud-stone-0d21eea10.5.azurestaticapps.net"],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      }
+    }
+  },
+  "entities": {
+    "Person": {
+      "source": "dbo.waggdb",
+      "permissions": [
+        {
+          "actions": ["create", "read", "update", "delete"],
+          "role": "anonymous"
+        }
+      ]
+    }
+  }
+}
